@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Nunito:wght@400;600;700&display=swap");
+
+.intake-page {
+  min-height: 100vh;
+  padding: 1.25rem 0 2.5rem;
+  color: #143035;
+  background:
+    radial-gradient(circle at 12% 10%, #ffffff 0%, #ffffff00 48%),
+    radial-gradient(circle at 88% 6%, #ffe8cf 0%, #ffe8cf00 44%),
+    linear-gradient(160deg, #dff7ee 0%, #f5faf9 52%, #fff8ef 100%);
+  font-family: "Nunito", sans-serif;
+}
+
+.intake-header,
+.intake-main {
+  width: min(860px, 92vw);
+  margin: 0 auto;
+}
+
+.intake-header {
+  margin-top: 1rem;
+}
+
+.intake-eyebrow {
+  margin: 0;
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: #ffffff;
+  color: #0f766e;
+  font-weight: 800;
+}
+
+.intake-header h1 {
+  margin: 0.9rem 0 0;
+  font-family: "Baloo 2", cursive;
+  font-size: clamp(1.85rem, 1.2rem + 2.2vw, 3rem);
+  line-height: 1.1;
+}
+
+.intake-header p {
+  margin: 0.55rem 0 0;
+  max-width: 66ch;
+  line-height: 1.6;
+}
+
+.intake-main {
+  margin-top: 1.3rem;
+}
+
+.intake-form,
+.intake-success {
+  padding: 1.25rem;
+  border-radius: 20px;
+  background: #ffffffe0;
+  border: 1px solid #ffffff;
+  box-shadow: 0 10px 30px #0f766e14;
+}
+
+.intake-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.intake-form label,
+.intake-form legend {
+  font-weight: 700;
+}
+
+.intake-form label {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.intake-form input,
+.intake-form select,
+.intake-form textarea {
+  width: 100%;
+  border: 1px solid #b6cdc8;
+  border-radius: 12px;
+  padding: 0.66rem 0.75rem;
+  font: inherit;
+  background: #ffffff;
+}
+
+.intake-form input:focus,
+.intake-form select:focus,
+.intake-form textarea:focus {
+  outline: 3px solid #0f766e30;
+  border-color: #0f766e;
+}
+
+.intake-form textarea {
+  resize: vertical;
+  min-height: 7rem;
+}
+
+.intake-form fieldset {
+  border: 0;
+  margin: 0.9rem 0;
+  padding: 0;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 0.4rem;
+}
+
+.radio-group label,
+.consent-row {
+  font-weight: 600;
+}
+
+.radio-group input,
+.consent-row input {
+  width: auto;
+  margin-right: 0.45rem;
+}
+
+.consent-row {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 0.2rem;
+}
+
+.form-actions,
+.intake-success-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.25rem;
+  font-weight: 800;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 180ms ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: wait;
+  transform: none;
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: #143035;
+  border: 2px solid #d7ece6;
+}
+
+.field-error,
+.submit-error {
+  margin: 0;
+  color: #9f1239;
+  font-size: 0.92rem;
+}
+
+.hint {
+  margin: 0.8rem 0 0;
+  color: #18545c;
+}
+
+.honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.intake-success h2 {
+  margin: 0;
+  font-family: "Baloo 2", cursive;
+  font-size: 1.85rem;
+}
+
+.intake-success p {
+  margin: 0.65rem 0 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 760px) {
+  .intake-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
